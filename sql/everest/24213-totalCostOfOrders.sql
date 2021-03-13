@@ -1,4 +1,4 @@
---select * from customers;
+--ignore their select * from customers;
 SELECT
     customers.id,
     customers.first_name,

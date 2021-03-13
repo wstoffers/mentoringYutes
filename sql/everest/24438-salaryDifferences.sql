@@ -1,4 +1,4 @@
---select * from db_employee;
+--ignore their select * from db_employee;
 SELECT
     MAX(CASE WHEN
             dept.department = 'marketing'
