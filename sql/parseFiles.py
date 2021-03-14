@@ -1,16 +1,21 @@
 #**    This line is 79 characters long.  The 80th character should wrap.   ***\
 
 #imports:
+import sys
 import os
 import re
 import numpy as np
 import pandas as pd
 import pyarrow
 from google.cloud import bigquery
+
+sys.path.append(os.environ.get('CIPHERPATH'))
+exec(f"from {os.environ.get('CIPHERMODULE')} import cipher")
 from schema import schema
 
 #define:
 def collect(directory):
+    '''Collects desired *.sql files out of magnolia/, everest/, and hyotei/'''
     holdsSql = ['magnolia','everest','hyotei']
     keep = {}
     for path, directories, files in os.walk(directory):
@@ -29,7 +34,7 @@ def parse(keep):
         if sqls:
             for sql in sqls:
                 matched = toMatch.search(sql)
-                row = [int(matched.group(1)),#needs conversion
+                row = [int(cipher().decreaseDifficulty(matched.group(1))),
                        matched.group(2),
                        3-ceilingDivide(12%len(os.path.split(path)[1])),
                        np.nan,
@@ -41,6 +46,7 @@ def parse(keep):
     print(frame)
 
 def usageArray(filePath):
+    '''Extracts all uppercase words, functions, and phrases'''
     with open(filePath) as sql:
         cleaned = re.sub('".*"','',sql.read())
         groups = re.findall('[A-Z ]+',cleaned)
@@ -48,7 +54,6 @@ def usageArray(filePath):
 
 #run:
 if __name__ == '__main__':
-    import sys
     home = os.path.abspath(os.path.dirname(sys.argv[0])) 
     sqls = collect(home)
     parse(sqls)
