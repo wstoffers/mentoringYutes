@@ -3,5 +3,6 @@ pyzt
 matplotlib
 pandas
 tabulate
+pyarrow
 google-cloud-storage
 google-cloud-bigquery
