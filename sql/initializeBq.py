@@ -2,6 +2,7 @@
 
 #imports:
 from google.cloud import bigquery
+from schema import schema
 
 #define:
 class customBq(object):
@@ -17,14 +18,6 @@ class customBq(object):
         self.dataset = f'{dataset.project}.{dataset.dataset_id}'
 
     def setUpTable(self):
-        schema = [bigquery.SchemaField('id','INTEGER',mode='REQUIRED'),
-                  bigquery.SchemaField('name','STRING',mode='REQUIRED'),
-                  bigquery.SchemaField('michelin','INTEGER',mode='REQUIRED'),
-                  bigquery.SchemaField('ace','BOOL',mode='NULLABLE'),
-                  bigquery.SchemaField('error','STRING',mode='NULLABLE'),
-                  bigquery.SchemaField('lookUp','BOOL',mode='NULLABLE'),
-                  bigquery.SchemaField('time','TIME',mode='NULLABLE'),
-                  bigquery.SchemaField('usage','STRING',mode='REPEATED')]
         table = bigquery.Table(f'{self.dataset}.problems',
                                schema = schema)
         table.clustering_fields = ['michelin']
