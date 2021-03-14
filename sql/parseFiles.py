@@ -5,6 +5,7 @@ import os
 import re
 import numpy as np
 import pandas as pd
+import pyarrow
 from google.cloud import bigquery
 from schema import schema
 
