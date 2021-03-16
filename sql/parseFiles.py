@@ -68,6 +68,7 @@ def combine(wholeFrame):
                                parse_dates=['time'],
                                date_parser=lambda k: pd.to_timedelta(k),
                                skipinitialspace=True)
+    partial['time'] = pd.to_timedelta(partial['time'])
     whole = whole.set_index('id')
     partial = partial.set_index('id')
     whole.update(partial)
@@ -80,5 +81,5 @@ if __name__ == '__main__':
     sqls = collect(home)
     frame = parse(sqls)
     dataFrame = combine(frame)
-    print(pd.to_timedelta(dataFrame.iloc[1,6]))
+    print(dataFrame.iloc[1,6])
     #existingBq.updateBq(dataFrame, schema)
