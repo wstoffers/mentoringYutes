@@ -47,7 +47,7 @@ def parse(keep):
                        None,
                        np.nan,
                        None,
-                       pd.NaT,
+                       pd.Timedelta(0),
                        usageArray(os.path.join(path,sql))]
                 frame.append(row)
     return frame
