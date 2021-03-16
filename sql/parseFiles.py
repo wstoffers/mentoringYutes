@@ -66,7 +66,6 @@ def combine(wholeFrame):
     partial = pd.read_csv(path,true_values=['t'],
                                false_values=['f'],
                                parse_dates=['time'],
-                               date_parser=lambda k: pd.to_timedelta(k),
                                skipinitialspace=True)
     whole = whole.set_index('id')
     partial = partial.set_index('id')
