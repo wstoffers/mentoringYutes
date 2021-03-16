@@ -47,7 +47,7 @@ def parse(keep):
                        None,
                        np.nan,
                        None,
-                       None,
+                       pd.NaT,
                        usageArray(os.path.join(path,sql))]
                 frame.append(row)
     return frame
@@ -68,11 +68,8 @@ def combine(wholeFrame):
                                parse_dates=['time'],
                                date_parser=lambda k: pd.to_timedelta(k),
                                skipinitialspace=True)
-    partial['time'] = pd.to_timedelta(partial['time'])
     whole = whole.set_index('id')
     partial = partial.set_index('id')
-    print(whole.loc[:,'time'])
-    print(partial.loc[:,'time'])
     whole.update(partial)
     whole = whole.reset_index()
     return whole
@@ -83,4 +80,5 @@ if __name__ == '__main__':
     sqls = collect(home)
     frame = parse(sqls)
     dataFrame = combine([frame[1]])
+    print(dataFrame.loc[:,'time'])
     #existingBq.updateBq(dataFrame, schema)
