@@ -13,6 +13,7 @@ from google.cloud import bigquery
 sys.path.append(os.environ.get('CIPHERPATH'))
 exec(f"from {os.environ.get('CIPHERMODULE')} import cipher")
 from schema import schema
+from useBq import existingBq
 
 #define:
 def collect(directory):
@@ -46,7 +47,7 @@ def parse(keep):
                        None,
                        np.nan,
                        None,
-                       np.nan,
+                       None,
                        usageArray(os.path.join(path,sql))]
                 frame.append(row)
     return frame
@@ -64,6 +65,8 @@ def combine(wholeFrame):
     path = os.path.join(parent,'sqlMetadata.csv')
     partial = pd.read_csv(path,true_values=['t'],
                                false_values=['f'],
+                               parse_dates=['time'],
+                               date_parser=lambda k: pd.to_timedelta(k),
                                skipinitialspace=True)
     whole = whole.set_index('id')
     partial = partial.set_index('id')
@@ -77,4 +80,4 @@ if __name__ == '__main__':
     sqls = collect(home)
     frame = parse(sqls)
     dataFrame = combine(frame)
-    #dataFrame is ready for bq?
+    existingBq.updateBq(dataFrame, schema)
