@@ -11,7 +11,8 @@ schema = [bigquery.SchemaField('id','INTEGER',mode='REQUIRED'),
           bigquery.SchemaField('error','STRING',mode='NULLABLE'),
           bigquery.SchemaField('lookUp','BOOL',mode='NULLABLE'),
           bigquery.SchemaField('time','TIME',mode='NULLABLE'),
-          bigquery.SchemaField('usage','STRING',mode='REPEATED')]
+          #bigquery.SchemaField('usage','STRING',mode='REPEATED')]
+          bigquery.SchemaField('usage','STRING',mode='REQUIRED')]
 
 #run:
 if __name__ == '__main__':

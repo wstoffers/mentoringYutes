@@ -48,7 +48,7 @@ def parse(keep):
                        None,
                        np.nan,
                        None,
-                       3162505216,
+                       0,
                        usageArray(os.path.join(path,sql))]
                 frame.append(row)
     return frame
@@ -60,18 +60,32 @@ def usageArray(filePath):
         groups = re.findall('[A-Z ]+',cleaned)
     return [x.strip() for x in groups if x.strip()]
 
+def convertToBqTimeInteger(time):
+    if pd.isna(time):
+        return 0
+    else:
+        minuteString, secondString = time.split(':')
+        minutes = int(minuteString)*67108864
+        seconds = int(secondString)*1048576
+        return minutes+seconds
+
 def combine(wholeFrame):
     whole = pd.DataFrame(wholeFrame,columns=[x.name for x in schema])
     parent = os.path.dirname(os.environ.get('CIPHERPATH'))
-    path = os.path.join(parent,'test.csv')#'sqlMetadata.csv')
+    path = os.path.join(parent,'sqlMetadata.csv')
     partial = pd.read_csv(path,true_values=['t'],
                                false_values=['f'],
-                               parse_dates=['time'],
-                               date_parser=lambda k: pd.to_timedelta(k),
+#                               parse_dates=['time'],
+#                               date_parser=lambda k: pd.to_timedelta(k),
                                skipinitialspace=True)
+    partial['time'] = partial['time'].map(lambda k: convertToBqTimeInteger(k))
+    #bug in .load_table_from_dataframe() so join to string instead of repeated:
+    #(https://github.com/googleapis/python-bigquery/pull/35)
+    #instead use split from within bq (https://tinyurl.com/bqStringSplit)
+    whole['usage'] = whole['usage'].map(lambda k: ','.join(k))
     whole = whole.set_index('id')
     partial = partial.set_index('id')
-    #whole.update(partial)
+    whole.update(partial)
     whole = whole.reset_index()
     return whole
 
