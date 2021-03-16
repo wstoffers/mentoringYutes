@@ -62,7 +62,7 @@ def usageArray(filePath):
 def combine(wholeFrame):
     whole = pd.DataFrame(wholeFrame,columns=[x.name for x in schema])
     parent = os.path.dirname(os.environ.get('CIPHERPATH'))
-    path = os.path.join(parent,'sqlMetadata.csv')
+    path = os.path.join(parent,'test.csv')#'sqlMetadata.csv')
     partial = pd.read_csv(path,true_values=['t'],
                                false_values=['f'],
                                parse_dates=['time'],
@@ -71,6 +71,8 @@ def combine(wholeFrame):
     partial['time'] = pd.to_timedelta(partial['time'])
     whole = whole.set_index('id')
     partial = partial.set_index('id')
+    print(whole.loc[:,'time'])
+    print(partial.loc[:,'time'])
     whole.update(partial)
     whole = whole.reset_index()
     return whole
@@ -80,6 +82,5 @@ if __name__ == '__main__':
     home = os.path.abspath(os.path.dirname(sys.argv[0])) 
     sqls = collect(home)
     frame = parse(sqls)
-    dataFrame = combine(frame)
-    print(dataFrame.iloc[1,6])
+    dataFrame = combine([frame[1]])
     #existingBq.updateBq(dataFrame, schema)
