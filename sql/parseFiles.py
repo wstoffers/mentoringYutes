@@ -48,7 +48,7 @@ def parse(keep):
                        None,
                        np.nan,
                        None,
-                       62914560,
+                       61865984,
                        usageArray(os.path.join(path,sql))]
                 frame.append(row)
     return frame
