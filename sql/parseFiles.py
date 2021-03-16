@@ -79,6 +79,5 @@ if __name__ == '__main__':
     home = os.path.abspath(os.path.dirname(sys.argv[0])) 
     sqls = collect(home)
     frame = parse(sqls)
-    dataFrame = combine([frame[1]])
-    print(dataFrame.loc[:,'time'])
-    #existingBq.updateBq(dataFrame, schema)
+    dataFrame = combine(frame)
+    existingBq.updateBq(dataFrame, schema)
