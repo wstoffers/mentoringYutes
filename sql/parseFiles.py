@@ -47,7 +47,7 @@ def parse(keep):
                        None,
                        np.nan,
                        None,
-                       pd.Timedelta(0),
+                       '',
                        usageArray(os.path.join(path,sql))]
                 frame.append(row)
     return frame
@@ -65,8 +65,8 @@ def combine(wholeFrame):
     path = os.path.join(parent,'test.csv')#'sqlMetadata.csv')
     partial = pd.read_csv(path,true_values=['t'],
                                false_values=['f'],
-                               parse_dates=['time'],
-                               date_parser=lambda k: pd.to_timedelta(k),
+#                               parse_dates=['time'],
+#                               date_parser=lambda k: pd.to_timedelta(k),
                                skipinitialspace=True)
     whole = whole.set_index('id')
     partial = partial.set_index('id')
