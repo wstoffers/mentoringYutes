@@ -5,6 +5,7 @@ import sys
 import os
 from pathlib import Path
 import re
+from datetime import timedelta
 import numpy as np
 import pandas as pd
 import pyarrow
@@ -47,7 +48,7 @@ def parse(keep):
                        None,
                        np.nan,
                        None,
-                       20971520,
+                       1048576,
                        usageArray(os.path.join(path,sql))]
                 frame.append(row)
     return frame
