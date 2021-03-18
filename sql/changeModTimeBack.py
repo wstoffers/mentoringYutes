@@ -11,7 +11,11 @@ def changeModificationDateTime(filePath, isoDateTime):
 
 #run:
 if __name__ == '__main__':
-    import sys
-    fileToChange = sys.argv[1]
-    newDateTime = sys.argv[2]
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--file', '-f', required=True)
+    parser.add_argument('--time', '-t', required=True)
+    args = parser.parse_args()
+    fileToChange = args.file
+    newDateTime = args.time
     changeModificationDateTime(fileToChange, newDateTime)
