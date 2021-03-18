@@ -15,8 +15,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--file', '-f', required=True,
                         help='file path to modify')
+    exampleTime = 'time to use in iso format (2008-02-03-18:32:00 recommended)'
     parser.add_argument('--time', '-t', required=True,
-                        help='time to use in iso format (2008-02-03-18:32:00 recommended)')
+                        help=exampleTime)
     args = parser.parse_args()
     fileToChange = args.file
     newDateTime = args.time
