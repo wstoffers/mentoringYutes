@@ -13,7 +13,8 @@ def changeModificationDateTime(filePath, isoDateTime):
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('--file', '-f', required=True)
+    parser.add_argument('--file', '-f', required=True,
+                        help='file path to modify')
     parser.add_argument('--time', '-t', required=True)
     args = parser.parse_args()
     fileToChange = args.file
