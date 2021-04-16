@@ -1,17 +1,17 @@
 Sql practice problems, with Postgres focus for now
 
-##### Initialize
+#### Initialize
 Perform once, at project inception
 ```bash
 $ python sql/initializeBq.py
 ```
 
-##### Repeatedly
+#### Repeatedly
 If `raw` is the raw number:
 ```bash
 $ python sandbox/obfuscate/*.py raw
 ```
-After completing problem `sqlFile` with number `coded` and title `name`, update `sandbox/sqlMetadata.csv` then:
+After completing problem `sqlFile` with number `coded` and title `name`, update `sandbox/sqlMetadata.csv` and then:
 ```bash
 $ python sql/parseFiles.py
 $ chmod 744 sql/*/coded-name.sql
