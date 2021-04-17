@@ -14,7 +14,7 @@ $ python sandbox/obfuscate/*.py raw
 Create file `sql/*/coded-name.sql` with number `coded` and title `name`. After completing problem, update `sandbox/sqlMetadata.csv` and then:
 ```bash
 $ python sql/parseFiles.py
-$ chmod 744 sql/*/coded-name.sql
+$ chmod 444 sql/*/coded-name.sql
 ```
 If problem needs to be put back in order:
 ```bash
