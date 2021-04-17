@@ -1,12 +1,12 @@
 Sql practice problems, with Postgres focus for now
 
-#### Initialize
+### Initialize
 Perform once, at project inception
 ```bash
 $ python sql/initializeBq.py
 ```
 
-#### Repeatedly
+### Repeatedly
 If `raw` is the raw number:
 ```bash
 $ python sandbox/obfuscate/*.py raw
