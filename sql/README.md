@@ -18,6 +18,6 @@ $ chmod 444 sql/*/coded-name.sql
 ```
 If problem needs to be put back in order:
 ```bash
-$ python sql/changeModTimeBack.py sql/*/coded-name.sql yyyy-mm-dd-hh:mm:ss
+$ python sql/changeModTimeBack.py -f sql/*/coded-name.sql -t yyyy-mm-dd-hh:mm:ss
 ```
 
