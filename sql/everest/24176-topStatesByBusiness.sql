@@ -9,4 +9,5 @@ GROUP BY
     state
 ORDER BY
     "fiveStars" DESC,
-    state ASC;
+    state ASC
+LIMIT 5;
