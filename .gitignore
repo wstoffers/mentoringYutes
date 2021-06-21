@@ -4,6 +4,7 @@
 .\#*.*
 original*
 sandbox/
+lawSandbox/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
