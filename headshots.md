@@ -44,3 +44,6 @@
 
 - [Really none of these have neck tension](https://www.maddiepeschong.com/headshot-tips/)
 
+- [Almost no neck tension](https://onlineprofilepros.com/say-cheese-here-are-7-factors-that-go-into-the-perfect-headshot/)
+    - Style is a way of saying who you are without having to speak - Rachel Zoe
+
