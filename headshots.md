@@ -42,3 +42,5 @@
 
 - [Some shots with neck tension and some without](https://www.binksheadshots.com/blog-headshot-tips-and-tricks/2020/3/17/top-5-clothing-options-for-women-to-bring-to-a-headshot-session-kt8z8)
 
+- [Really none of these have neck tension](https://www.maddiepeschong.com/headshot-tips/)
+
