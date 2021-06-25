@@ -39,3 +39,6 @@
     - Bring out a slight squint and strong piercing eyes
 
 - [Examples with lots of neck tension](https://www.linkedin.com/pulse/20141013143030-11257534-how-to-look-your-best-for-a-headshot/?articleId=8449492689580492922)
+
+- [Some shots with neck tension and some without](https://www.binksheadshots.com/blog-headshot-tips-and-tricks/2020/3/17/top-5-clothing-options-for-women-to-bring-to-a-headshot-session-kt8z8)
+
