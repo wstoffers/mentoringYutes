@@ -37,3 +37,5 @@
     - Just like with acting it's all about the eyes and what's happening behind them
     - Strong inner thoughts, implying backstory and a life behind the eyes
     - Bring out a slight squint and strong piercing eyes
+
+- [Examples with lots of neck tension](https://www.linkedin.com/pulse/20141013143030-11257534-how-to-look-your-best-for-a-headshot/?articleId=8449492689580492922)
