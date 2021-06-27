@@ -32,3 +32,8 @@
     - Tara Westwood was good except no depth/separation on the right side of the frame
     - Jennifer Onvie was great and very dramatic even though the catch lights are very small
     - Jedediah Bila seems good too even though it's not straight on, though are the catch lights distracting?
+
+- [Advice from an acting coach](https://www.backstage.com/magazine/article/tips-better-headshot-11730/)
+    - Just like with acting it's all about the eyes and what's happening behind them
+    - Strong inner thoughts, implying backstory and a life behind the eyes
+    - Bring out a slight squint and strong piercing eyes
