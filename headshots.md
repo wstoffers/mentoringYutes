@@ -27,3 +27,8 @@
 - [Good landscape headshot example](https://actinginlondon.co.uk/acting-headshots-guide/)
     - Guy with the curls, heavy bokeh background
 
+- [Many examples](https://www.jordanmatter.com/photography/head-shots/actor-headshots)
+    - Especially liked some examples after filtering by female for gender
+    - Tara Westwood was good except no depth/separation on the right side of the frame
+    - Jennifer Onvie was great and very dramatic even though the catch lights are very small
+    - Jedediah Bila seems good too even though it's not straight on, though are the catch lights distracting?
