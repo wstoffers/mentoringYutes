@@ -24,3 +24,6 @@
     - It's a captured moment of you acting
     - It's a tiny piece of art, meant to represent the art that you create, and what makes you unique as an artist
 
+- [Good landscape headshot example](https://actinginlondon.co.uk/acting-headshots-guide/)
+    - Guy with the curls, heavy bokeh background
+
