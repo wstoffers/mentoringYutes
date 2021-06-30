@@ -19,3 +19,8 @@
     - Most headshots should be neutral representation of who the actor is in their daily life
         - Is this just for auditioning actors?
         - If not for someone who's auditioning for unknown/future roles, instead want a representation of the specific character or specific line of work?
+
+- [What casting directors supposedly want](https://www.nycastings.com/headshot-fixes-every-casting-director-wishes-you-would-do/)
+    - It's a captured moment of you acting
+    - It's a tiny piece of art, meant to represent the art that you create, and what makes you unique as an artist
+
