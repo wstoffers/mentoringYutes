@@ -13,3 +13,9 @@
 - [Rembrandt lighting and clamshell lighting examples](https://www.amateurphotographer.co.uk/technique/expert_advice/how-to-take-better-headshots-lighting-132728)
     - Really big Rembrandt lighting triangle
     - Rectangular catch lights, first one then two
+
+- [Advice from an agent and a casting director](https://www.stewartwhitley.com/news-blog/http/wwwbackstagecom/interview/8-tips-better-headshots-agent-and-cd/utmcampaigneditorial20postsutmcontent18553891utmmediumsocialutmsourcetwitter)
+    - The eyes are the most important element of any headshot so face needs to be the focus
+    - Most headshots should be neutral representation of who the actor is in their daily life
+        - Is this just for auditioning actors?
+        - If not for someone who's auditioning for unknown/future roles, instead want a representation of the specific character or specific line of work?
