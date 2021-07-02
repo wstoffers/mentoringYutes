@@ -10,3 +10,6 @@
     - 5:35
     - 6:25
 
+- [Rembrandt lighting and clamshell lighting examples](https://www.amateurphotographer.co.uk/technique/expert_advice/how-to-take-better-headshots-lighting-132728)
+    - Really big Rembrandt lighting triangle
+    - Rectangular catch lights, first one then two
